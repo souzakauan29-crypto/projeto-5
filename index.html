@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Organizador de Estudos</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <header class="topo">
+    <div class="logo">📚 Meu Organizador</div>
+    <span class="subtitulo">Seu espaço de estudos</span>
+  </header>
+
+  <main class="container">
+
+    <section class="boas-vindas">
+      <div>
+        <p class="pequeno">SEU ESPAÇO DE APRENDIZADO</p>
+        <h1>Olá, estudante! 👋</h1>
+        <p>Organize suas tarefas e alcance seus objetivos.</p>
+      </div>
+      <div class="emoji">🎓</div>
+    </section>
+
+    <section class="resumo">
+
+      <div class="resumo-card">
+        <span>📋</span>
+        <p>Total de tarefas</p>
+        <h2 id="totalTarefas">0</h2>
+      </div>
+
+      <div class="resumo-card">
+        <span>⏳</span>
+        <p>Pendentes</p>
+        <h2 id="tarefasPendentes">0</h2>
+      </div>
+
+      <div class="resumo-card">
+        <span>✅</span>
+        <p>Concluídas</p>
+        <h2 id="tarefasConcluidas">0</h2>
+      </div>
+
+    </section>
+
+    <section class="card">
+      <h2>📖 Minhas matérias</h2>
+
+      <div class="materias">
+        <div class="materia">📐 Matemática</div>
+        <div class="materia">🧬 Biologia</div>
+        <div class="materia">🌎 Geografia</div>
+        <div class="materia">📚 Português</div>
+        <div class="materia">⚗️ Química</div>
+        <div class="materia">🔬 Física</div>
+      </div>
+    </section>
+
+    <section class="card">
+
+      <div class="titulo-tarefas">
+        <div>
+          <h2>📝 Minhas tarefas do dia</h2>
+          <p>Adicione e acompanhe suas atividades.</p>
+        </div>
+      </div>
+
+      <form id="formTarefa">
+
+        <input
+          type="text"
+          id="campoTarefa"
+          placeholder="O que você precisa estudar hoje?"
+          maxlength="120"
+          autocomplete="off"
+          required
+        >
+
+        <button type="submit" class="botao-adicionar">
+          + Adicionar tarefa
+        </button>
+
+      </form>
+
+      <div class="filtros">
+        <button type="button" class="filtro ativo" data-filtro="todas">
+          Todas
+        </button>
+
+        <button type="button" class="filtro" data-filtro="pendentes">
+          Pendentes
+        </button>
+
+        <button type="button" class="filtro" data-filtro="concluidas">
+          Concluídas
+        </button>
+      </div>
+
+      <ul id="listaTarefas" aria-live="polite"></ul>
+
+      <p id="mensagemVazia" class="mensagem-vazia">
+        📚 Nenhuma tarefa por aqui. Adicione sua primeira atividade!
+      </p>
+
+    </section>
+
+    <section class="card meta">
+      <h2>🎯 Minha meta de hoje</h2>
+      <p>Um passo de cada vez! Continue estudando e evoluindo.</p>
+
+      <div class="barra-fundo">
+        <div id="barraProgresso" class="barra-progresso"></div>
+      </div>
+
+      <p id="textoProgresso">0% concluído</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Meu Organizador de Estudos © 2026</p>
+    <p>Feito para ajudar você a aprender mais! 💙</p>
+  </footer>
+
+</body>
+</html>
